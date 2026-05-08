@@ -9,96 +9,152 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
       color: white;
+    }
+
+    header {
       text-align: center;
-
-      /* BACKGROUND */
-      background: url('bg.jpg') no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 40px 20px;
+      background: #020617;
     }
 
-    /* overlay biar teks kebaca */
-    .overlay {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 30px;
-      border-radius: 15px;
-      width: 90%;
-      max-width: 320px;
-      backdrop-filter: blur(5px);
-    }
-
-    h1 {
+    header h1 {
+      font-size: 40px;
+      color: #00eaff;
       margin: 0;
+      text-shadow: 0 0 10px #00eaff;
+    }
+
+    header p {
+      color: #94a3b8;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h2 {
       font-size: 28px;
-      color: #00eaff;
+      margin-bottom: 10px;
     }
 
-    .paket {
-      background: rgba(0, 0, 0, 0.6);
-      margin: 12px 0;
-      padding: 15px;
-      border-radius: 10px;
+    .hero p {
+      color: #cbd5f5;
     }
 
-    .paket h2 {
-      margin: 0;
-      font-size: 18px;
-    }
-
-    .paket p {
-      margin: 5px 0 0;
-      font-size: 16px;
-      color: #00eaff;
-    }
-
-    .wa-btn {
-      display: block;
+    .btn {
+      display: inline-block;
       margin-top: 20px;
-      padding: 14px;
+      padding: 12px 25px;
       background: #25D366;
       color: white;
-      border-radius: 30px;
       text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s;
       font-weight: bold;
     }
 
-    .wa-btn:hover {
+    .btn:hover {
       background: #1ebe5d;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,234,255,0.3);
+    }
+
+    .card h3 {
+      color: #00eaff;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #22d3ee;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    .wa-number {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #25D366;
+      font-weight: bold;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="overlay">
-    <h1>List harga paket</h1>
+<header>
+  <h1>4G.HOTSPOT</h1>
+  <p>Internet Murah & Stabil</p>
+</header>
 
-    <div class="paket">
-      <h2>Paket 1 HP</h2>
-      <p>Rp 40.000</p>
+<section class="hero">
+  <h2>Paket Harian</h2>
+  <p>Up To 50 Mbps</p>
+  <a href="https://wa.me/6285710492854" class="btn">Order via WhatsApp</a>
+  <div class="wa-number">WA: 085710492854</div>
+</section>
+
+<section class="section">
+  <h2>Daftar Paket</h2>
+  <div class="services">
+
+    <div class="card">
+      <h3>1 HP</h3>
+      <div class="price">Rp 40.000</div>
     </div>
 
-    <div class="paket">
-      <h2>Paket 2 HP</h2>
-      <p>Rp 70.000</p>
-    </div>
-    
-    <div class="paket">
-      <h2>Paket 3 HP</h2>
-      <p>Rp 100.000</p>
+    <div class="card">
+      <h3>2 HP</h3>
+      <div class="price">Rp 70.000</div>
     </div>
 
-    <div class="paket">
-      <h2>Up To 50Mbps</h2>
+    <div class="card">
+      <h3>3 HP</h3>
+      <div class="price">Rp 100.000</div>
     </div>
 
-    <a class="wa-btn" href="https://wa.me/6285710492854" target="_blank">
-      WhatsApp
-    </a>
+    <div class="card">
+      <h3>4 HP</h3>
+      <div class="price">Rp 120.000</div>
+    </div>
+
+    <div class="card">
+      <h3>5 HP</h3>
+      <div class="price">Rp 150.000</div>
+    </div>
+
   </div>
+</section>
+
+<footer>
+  <p>© 2026 4G.hotspot | WA: 085710492854</p>
+</footer>
 
 </body>
 </html>
-
